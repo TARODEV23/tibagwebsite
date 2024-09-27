@@ -17,6 +17,10 @@
     <title>Tibag Baliuag, Bulacan</title>
 </head>
 <style>
+    body {
+        overflow-x: none;
+    }
+
     .navbar-brand {
         font-family: var(--tnr);
     }
@@ -30,14 +34,41 @@
         background-position: center;
     }
 
-    #accomplishment_section{
+    #accomplishment_section {
         background-color: var(--blue);
-        height: 50dvh;
+        height: fit-content;
     }
 
     #jobfair_section {
         background-color: var(--blue);
+        height: fit-content;
+    }
+
+    .jobfairImg {
+        height: 80dvh;
+    }
+
+    .jobfairText:hover {
+        border: 1px solid var(--green);
+        border-radius: 5px;
+        background-color: var(--green);
+        color: var(--light);
+    }
+
+    #footer_section {
+        background-color: var(--green);
+        height: fit-content;
+    }
+
+    #officials_section {
+        background-image: linear-gradient(var(--blue), var(--green));
         height: 50dvh;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .jobfairImg {
+            height: 100%;
+        }
     }
 </style>
 
@@ -100,17 +131,17 @@
                     <h1 class="text-start md-text-center mb-0">Barangay Tibag</h1>
                     <h5 class="text-start md-text-center mt-0">Baliuag, Bulacan</h5>
                     <p class="text-start md-text-center mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
                     <ul class="nav d-lg-flex d-none d-md-flex">
                         <li class="nav-item text-lg-start text-md-center">
                             <a href="#jobfair_section" class="nav-link fw-bold text-success">Job Fair</a>
                         </li>
                         <li class="nav-item text-lg-start text-md-center">
-                            <a href="" class="nav-link fw-bold text-success">Sign Up</a>
+                            <a href="#accomplishment_section" class="nav-link fw-bold text-success">Achievements</a>
                         </li>
                         <li class="nav-item text-lg-start text-md-center">
-                            <a href="" class="nav-link fw-bold text-success">Sign Up</a>
+                            <a href="#footer_section" class="nav-link fw-bold text-success d-none d-md-block">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -124,11 +155,34 @@
     </section> <!-- landing page -->
 
     <section id="jobfair_section"> <!-- jobfair section -->
-        <div class="container container-fluid px-2 py-3">
-            <div class="shadow shadow-lg rounded bg-light p-2">
+        <div class="container container-fluid py-3">
+            <div class="shadow shadow-lg rounded bg-light p-2" style="height: fit-content;">
                 <h1 class="text-center fw-bold">JOB FAIR</h1>
                 <div class="border-bottom my-2"></div>
-
+                <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="500">
+                            <img src="assets/images/tibag_bg.jpg" class="d-block w-100 img-fluid jobfairImg" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="fw-bold jobfairText">Job Fair Title</h5>
+                                <p class="fw-bold jobfairText">Job Fair information here.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </section> <!-- jobfair section -->
@@ -146,6 +200,38 @@
         </div>
     </section> <!-- section of barangay accomplishment -->
 
+    <section id="officials_section">
+        <h2 class="text-center fw-bold">OFFICIALS HERE W/ MISSION / VISION</h2>
+    </section>
+
+    <section id="footer_section"> <!-- footer  section here -->
+        <div class="row p-4 pb-1">
+            <div class="col text-center text-md-start">
+                <img src="assets/images/tibag_seal.png" alt="" class="text-center" style="width: 150px; height: 150px;">
+                <p class="strong">Barangay Tibag Baliuag, Bulacan <br> <span class="lead">Alright Reserved 2024</span></p>
+
+            </div>
+            <div class="col d-none d-md-block">
+                <h3 class="fw-bold mt-5">Social Media</h3>
+                <ul class="nav text-start d-block">
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-primary">Facebook</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-primary">Facebook</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col d-none d-md-block">
+                <h3 class="fw-bold mt-5">Contact</h3>
+                <ul class="nav d-block">
+                    <p class="fw-bold">Contact no.: 09123458690</p>
+                    <p class="fw-bold">Secretary: Juan Dela Cruz</p>
+                    <p class="fw-bold">Treasurer: Juan Dela Cruz</p>
+                </ul>
+            </div>
+        </div>
+    </section> <!-- footer  section here -->
 </body>
 
 </html>
