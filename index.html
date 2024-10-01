@@ -38,12 +38,18 @@
     }
 
     #accomplishment_section {
-        background-color: var(--blue);
+        background: linear-gradient(rgba(0, 225, 0, 0.2), rgba(0, 225, 0, 0.2)), url('assets/images/tibag_bg.jpg'); /* green transparent */
+        background-size: cover;
+        background-position: center;
+        width: 100%;
         height: fit-content;
     }
 
     #jobfair_section {
-        background-color: var(--blue);
+        background: linear-gradient(rgba(57,147,221,0.5), rgba(57,147,221,0.5)), url('assets/images/tibag_bg.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
         height: fit-content;
     }
 
@@ -63,14 +69,16 @@
         height: fit-content;
     }
 
+    #disaster_risk_section {
+        background-color: var(--blue);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+    }
+
     #officials_section {
         background-image: linear-gradient(var(--blue), var(--green));
         height: 50dvh;
-    }
-
-    #disaster_risk_section {
-        background-color: var(--blue);
-        height: fit-content;
     }
 
     @media only screen and (max-width: 600px) {
@@ -301,10 +309,47 @@
 
     <section id="disaster_risk_section"> <!-- disaster risk management section -->
         <div class="container container-fluid p-3">
-            <div class="row g-1">
+            <div class="row g-1"> <!-- alert card row here -->
                 <div class="col">
-                    <div class="border-bottom fw-bold text-dark px-5 mb-1"></div>
                     <h2 class="fw-bold text-center" style="text-shadow: 2px 2px 5px var(--light);">Disaster Risk Management</h2>
+                    <div class="row g-1 pb-3 px-3">
+                        <div class="col-12 col-sm-4">
+                            <div class="card">
+                                <div class="card-header fw-bold bg-danger">Level 3</div>
+                                <div class="card-body fw-bold">danger</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <div class="card">
+                                <div class="card-header fw-bold" style="background-color: orangered;">Level 2</div>
+                                <div class="card-body fw-bold">alert</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <div class="card">
+                                <div class="card-header fw-bold bg-warning" style="background-color: orangered;">Level 1</div>
+                                <div class="card-body fw-bold">warning</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- alert card row here -->
+
+            <div class="row g-1 p-3">
+                <div class="col-12 col-md-6">
+                    <h5 class="fw-bold">Things to do when flood:</h5>
+                    <li class="fw-bold nav-item">1: Lorem.</li>
+                    <li class="fw-bold nav-item">2: Lorem, ipsum.</li>
+                    <li class="fw-bold nav-item">3: Lorem, ipsum dolor.</li>
+                    <li class="fw-bold nav-item">4: Lorem ipsum dolor sit.</li>
+                </div>
+                <div class="col-12 col-md-6 mt-3 mt-md-0">
+                    <h5 class="fw-bold">72-HOUR SURVIVAL KIT</h5>
+                    <li class="fw-bold nav-item">Whistle</li>
+                    <li class="fw-bold nav-item">Clothes</li>
+                    <li class="fw-bold nav-item">Bottled Water</li>
+                    <li class="fw-bold nav-item">Flashlight</li>
+                    <li class="fw-bold nav-item">Cellphone</li>
                 </div>
             </div>
         </div>
